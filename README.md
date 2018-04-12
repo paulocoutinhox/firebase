@@ -38,18 +38,8 @@ To run on simulator using command line you need **node** and **ios-deploy** tool
 > brew install node  
 > npm install -g ios-sim  
 
-## Problem - 12/04/2018
+## Screenshots
 
-Before add all frameworks and run script phase the project is running without problems. After add all, im receiving this error:  
+<img src="extras/images/ss01.png">  
 
-<img src="extras/images/error001.png">  
-
-When i run "make run-simulator", i got:
-
-```
-ios-sim launch ./build/Build/Products/Debug-iphonesimulator/FirebaseTest.app --devicetypeid=iPhone-7
-An error was encountered processing the command (domain=IXUserPresentableErrorDomain, code=1):
-This app could not be installed at this time.
-Underlying error (domain=MIInstallerErrorDomain, code=57):
-	Found bundle at /Users/paulo/Library/Developer/CoreSimulator/Devices/CE49D8E9-CC06-4398-9ED1-D11DB21B64C9/data/Library/Caches/com.apple.mobile.installd.staging/temp.NvZWu9/extracted/FirebaseTest.app/Frameworks/FirebaseCore.framework with the same identifier (com.firebase.Firebase) as bundle at /Users/paulo/Library/Developer/CoreSimulator/Devices/CE49D8E9-CC06-4398-9ED1-D11DB21B64C9/data/Library/Caches/com.apple.mobile.installd.staging/temp.NvZWu9/extracted/FirebaseTest.app/Frameworks/Protobuf.framework
-```
+<img src="extras/images/ss02.png">  
