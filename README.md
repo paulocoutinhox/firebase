@@ -1,6 +1,6 @@
-# Firebase test with Carthage
+# Firebase test with carthage
 
-This is a example project only to test Firebase with Carthage.  
+This is a example project only to test Firebase with carthage.  
 
 ## Make
 
