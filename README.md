@@ -12,8 +12,8 @@ I have create a simple Makefile to easy update and clear carthage things, so sim
 > make carthage-clear-cache  
 > make carthage-update  
 
-> make build
-> make deploy 
+> make build  
+> make deploy  
 
 ## Firebase for carthage
 
