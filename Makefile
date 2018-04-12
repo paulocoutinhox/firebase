@@ -7,9 +7,13 @@ help:
 	@echo "Type: make [rule]. Available options are:"
 	@echo ""
 	@echo "- help"
+	@echo ""
 	@echo "- carthage-update"
 	@echo "- carthage-clear"
 	@echo "- carthage-clear-cache"	
+	@echo ""
+	@echo "- build"	
+	@echo "- deploy"	
 	@echo ""
 
 carthage-update:
@@ -24,4 +28,11 @@ carthage-clear:
 
 carthage-clear-cache:
 	rm -rf ~/Library/Caches/org.carthage.CarthageKit
+
+build:
+	xcodebuild -target FirebaseTest build
+
+deploy:
+	make build
+	ios-deploy --debug --bundle ./build/Release-iphoneos/FirebaseTest.app
 
