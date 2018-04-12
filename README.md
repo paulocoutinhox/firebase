@@ -6,5 +6,5 @@ This is a example project only to test Firebase with Carthage.
 
 Before add all frameworks and run script phase the project is running without problems. After add all, im receiving this error:  
 
-<img src="extras/images/error.png">  
+<img src="extras/images/error001.png">  
 
