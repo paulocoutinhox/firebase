@@ -40,6 +40,6 @@ To run on simulator using command line you need **node** and **ios-deploy** tool
 
 ## Screenshots
 
-<img src="extras/images/ss01.png">  
+<img src="extras/images/ss001.png">  
 
-<img src="extras/images/ss02.png">  
+<img src="extras/images/ss002.png">  
