@@ -21,6 +21,7 @@
 		3A034B4A207FD63600B4C4FD /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A034B41207FD63500B4C4FD /* FirebaseCore.framework */; };
 		3A034B4B207FD63600B4C4FD /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A034B42207FD63500B4C4FD /* FirebaseCoreDiagnostics.framework */; };
 		3A034B4C207FD63600B4C4FD /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A034B43207FD63500B4C4FD /* FirebaseInstanceID.framework */; };
+		3A034B4F207FDADF00B4C4FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A034B4E207FDADF00B4C4FD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3A034B41207FD63500B4C4FD /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Carthage/Build/iOS/FirebaseCore.framework; sourceTree = "<group>"; };
 		3A034B42207FD63500B4C4FD /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Carthage/Build/iOS/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		3A034B43207FD63500B4C4FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		3A034B4E207FDADF00B4C4FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				3A034B28207FD28D00B4C4FD /* AppDelegate.swift */,
-				3A034B2A207FD28D00B4C4FD /* ViewController.swift */,
-				3A034B2C207FD28D00B4C4FD /* Main.storyboard */,
 				3A034B2F207FD28F00B4C4FD /* Assets.xcassets */,
-				3A034B31207FD28F00B4C4FD /* LaunchScreen.storyboard */,
+				3A034B4E207FDADF00B4C4FD /* GoogleService-Info.plist */,
 				3A034B34207FD28F00B4C4FD /* Info.plist */,
+				3A034B31207FD28F00B4C4FD /* LaunchScreen.storyboard */,
+				3A034B2C207FD28D00B4C4FD /* Main.storyboard */,
+				3A034B2A207FD28D00B4C4FD /* ViewController.swift */,
 			);
 			path = FirebaseTest;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A034B33207FD28F00B4C4FD /* LaunchScreen.storyboard in Resources */,
+				3A034B4F207FDADF00B4C4FD /* GoogleService-Info.plist in Resources */,
 				3A034B30207FD28F00B4C4FD /* Assets.xcassets in Resources */,
 				3A034B2E207FD28D00B4C4FD /* Main.storyboard in Resources */,
 			);

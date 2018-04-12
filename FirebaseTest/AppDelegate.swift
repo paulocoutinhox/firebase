@@ -7,6 +7,8 @@
 //
 
 import UIKit
+
+import FirebaseCore
 import FirebaseMessaging
 
 @UIApplicationMain
@@ -15,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // fireabse
+        FirebaseApp.configure()
+
         // push notification
         let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
         application.registerUserNotificationSettings(settings)
