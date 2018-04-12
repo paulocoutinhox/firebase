@@ -11,6 +11,12 @@ I have create a simple Makefile to easy update and clear carthage things, so sim
 > make carthage-clear-cache  
 > make carthage-update  
 
+## Firebase for carthage
+
+Im using this repository instructions:  
+
+https://github.com/firebase/firebase-ios-sdk
+
 ## Problem - 12/04/2018
 
 Before add all frameworks and run script phase the project is running without problems. After add all, im receiving this error:  
