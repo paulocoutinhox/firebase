@@ -52,6 +52,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        if application.applicationState == .active {
+            processRemoteNotification(data: userInfo)
+        }
+    }
+    
+    func processRemoteNotification(data: [AnyHashable : Any]) {
+        print("New remote notification received")
+        print(data)
+        
+        guard let dataAPS = data["aps"] as? [AnyHashable : Any] else {
+            print("Invalid remote notification data received")
+            return
+        }
+        
+        var title = "Message"
+        var body = "New remote message received"
+        
+        if let data = dataAPS["alert"] as? [AnyHashable : Any] {
+            // check if alert is another hash
+            title = data["title"] as! String
+            body = data["body"] as! String
+        } else if let data = dataAPS["alert"] as? String {
+            // check if alert is string
+            body = data
+        }
+        
+        let alert = UIAlertController(title: title, message: body, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
+    }
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         print("FCM push token: \(fcmToken)")
     }

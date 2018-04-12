@@ -44,6 +44,7 @@
 		3A034B43207FD63500B4C4FD /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Carthage/Build/iOS/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		3A034B4E207FDADF00B4C4FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A595ED9207FF4EB004B940A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3A595EDB207FF772004B940A /* FirebaseTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		3A034B27207FD28D00B4C4FD /* FirebaseTest */ = {
 			isa = PBXGroup;
 			children = (
+				3A595EDB207FF772004B940A /* FirebaseTest.entitlements */,
 				3A034B28207FD28D00B4C4FD /* AppDelegate.swift */,
 				3A034B2F207FD28F00B4C4FD /* Assets.xcassets */,
 				3A034B4E207FDADF00B4C4FD /* GoogleService-Info.plist */,
@@ -125,7 +127,6 @@
 				3A034B21207FD28D00B4C4FD /* Sources */,
 				3A034B22207FD28D00B4C4FD /* Frameworks */,
 				3A034B23207FD28D00B4C4FD /* Resources */,
-				3A034B4D207FD64D00B4C4FD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -148,6 +149,11 @@
 				TargetAttributes = {
 					3A034B24207FD28D00B4C4FD = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -182,31 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3A034B4D207FD64D00B4C4FD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseInstanceID.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseNanoPB.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/nanopb.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseCore.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseAnalytics.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Protobuf.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/GoogleToolboxForMac.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseMessaging.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FirebaseCoreDiagnostics.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A034B21207FD28D00B4C4FD /* Sources */ = {
@@ -358,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseTest/FirebaseTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99AHAA343Q;
@@ -383,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseTest/FirebaseTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99AHAA343Q;
